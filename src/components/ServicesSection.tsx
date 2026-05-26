@@ -1,7 +1,7 @@
 import { Truck, Plane, Ship, Box, UserCheck, Container, Cuboid } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import ScrollAnimation from "./ScrollAnimation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
 // Updated utility to return both name and slug
@@ -83,7 +83,11 @@ const ServicesSection = () => {
     return '/services';
   };
 
-  const services = getFilteredServices();
+  // Randomize the filtered services and select exactly 6 on load
+  const services = useMemo(() => {
+    const filtered = getFilteredServices();
+    return [...filtered].sort(() => 0.5 - Math.random()).slice(0, 6);
+  }, [servicesList, currentCountry.name]);
 
   return (
     <section className="py-20 bg-black">
