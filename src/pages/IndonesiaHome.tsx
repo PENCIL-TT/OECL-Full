@@ -10,7 +10,7 @@ import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import UpdatesSection from "@/components/UpdatesSection";
 import CertificationSg1 from "@/components/CertificationSg1";
-import IndonesiaContactForm from "@/components/IndonesiaContactForm";
+import ContactForm from "@/components/ContactForm";
 import GlobalPresence from "@/components/GlobalPresence";
 import Footer from "@/components/Footer";
 import { useScrollToTop } from "@/hooks/useScrollToTop"; // ✅ Import the hook
@@ -51,7 +51,7 @@ const IndonesiaHome = () => {
        <StatsSection />
       <GlobalPresence />
       <UpdatesSection />
-      <IndonesiaContactForm />
+      <ContactForm />
       <Footer />
     </div>
   );
