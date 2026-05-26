@@ -32,11 +32,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center gap-4">
-            <img
-              alt="GGL Logo"
-              className="h-10 w-auto cursor-pointer object-fill transition-all duration-300"
-              src="/lovable-uploads/80ac017b-3e55-468b-9c72-9730b97cdcb0.png"
-            />
+            <Link to={getNavLink("/home")}>
+              <img
+                alt="GGL Logo"
+                className="h-10 w-auto cursor-pointer object-fill transition-all duration-300"
+                src="/lovable-uploads/80ac017b-3e55-468b-9c72-9730b97cdcb0.png"
+              />
+            </Link>
             <div className="h-8 w-px bg-gray-500 hidden md:block"></div>
             <a
   href="https://1ge.sg"
